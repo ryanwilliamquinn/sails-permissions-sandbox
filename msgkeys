@@ -1,0 +1,9 @@
+export ADMIN_USERNAME=admin
+export ADMIN_PASSWORD=mypassword
+export ADMIN_EMAIL=ryanwilliamquinn@gmail.com
+export POSTGRES_USER=postgres
+export POSTGRES_PASSWORD=postgres
+export POSTGRES_DB=messages
+export POSTGRES_PORT=5432
+export POSTGRES_HOST=localhost
+export POSTGRES_SSL=false
