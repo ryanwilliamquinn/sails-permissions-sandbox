@@ -48,7 +48,7 @@ PermissionService.prototype.addRole = function(userName, roleName) {
  * modelNames is an string
  * roleName is a string
  */
-PermissionService.prototype.addPermission = function(roleName, modelName, type, relation) {
+PermissionService.prototype.addPermission = function(roleName, modelName, type, relation, criteria) {
   relation = relation && relation.toLowerCase() === 'owner' ? 'owner' : 'role';
 
   Promise.bind({}, Role.findOne({
@@ -66,7 +66,8 @@ PermissionService.prototype.addPermission = function(roleName, modelName, type, 
         action: type,
         role: this.role.id,
         createdBy: 1,
-        relation: relation
+        relation: relation,
+        where: criteria
       });
     })
     .then(function(newPermission) {
