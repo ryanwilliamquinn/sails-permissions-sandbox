@@ -6,7 +6,10 @@
  */
 
 module.exports = {
-
+    /*
+  connection: ['rabbitCluster', 'pgdev'],
+  routingKey: ['stream'],
+  */
   attributes: {
     text: 'string',
     author: {

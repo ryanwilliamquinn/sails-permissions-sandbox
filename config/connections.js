@@ -81,6 +81,23 @@ module.exports.connections = {
     password: process.env.POSTGRES_PASSWORD,
     database: process.env.POSTGRES_DB,
     port: process.env.POSTGRES_PORT
+  },
+
+  rabbitCluster: {
+    adapter: 'sails-rabbitmq',
+
+    /**
+     *      * The url of your rabbitmq installation
+     *           */
+    url: 'amqp://localhost:5672',
+
+    /**
+     * Define how persistence is managed. 'true' will subscribe to all queues
+     * and persist models that are published as messages. 'false' will do
+     * nothing. This lets you turn off the persistence worker feature on the
+     * Sails.js web server, and enable it in separate worker processes.
+     */
+    persistence: false
   }
 
 

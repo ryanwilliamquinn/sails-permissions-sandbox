@@ -27,7 +27,6 @@ module.exports.policies = {
     'OwnerPolicy',
     'PermissionPolicy',
     'RolePolicy',
-    'AttributePolicy',
     'CriteriaPolicy'
   ],
 
